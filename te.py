@@ -1,3 +1,6 @@
+# coding=UTF-8
+import os
+
 from selenium import webdriver
 import time
 
@@ -42,6 +45,22 @@ class test:
 
         return self.driver
 
+    def set_case_list(self):
+        """设置case
+        set case list
+        :return:
+        """
+        self.caseList = []
+        self.caseListFile = os.path.join(os.getcwd(), "caselist.txt")
+        fb = open(self.caseListFile,encoding='utf-8')                #打开case
+        for value in fb.readlines():                #读取case数据
+            data = str(value)
+            if data != '' and not data.startswith("#"):
+                self.caseList.append(data.replace("\n", ""))
+        fb.close()
+        print(self.caseList)
+
 if __name__ == '__main__':
-    test().login()
-    time.sleep(8)
+    # test().login()
+    # time.sleep(8)
+    test().set_case_list()

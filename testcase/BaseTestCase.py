@@ -1,10 +1,12 @@
+# coding=UTF-8
+
 import logging
 
 class BaseTestCase(object):
     logging.basicConfig()  # 先初始化
     # 设置一个独立的log，在为它设置级别
     #如果不想别人修改log，可以先变为私有变量
-    _log = logging.getLogger('xueqiu')
+    _log = logging.getLogger('gdzc')
     _log.setLevel(logging.INFO)
 
     #在调用方法获取变量

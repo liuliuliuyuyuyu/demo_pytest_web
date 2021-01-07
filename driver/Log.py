@@ -1,27 +1,25 @@
 # coding=UTF-8
 
 import os
-import readConfig
 import logging
 from datetime import datetime
 import threading
 
 #输出日志
-localReadConfig = readConfig.ReadConfig()                             #初始化读取配置信息的类
 
-
-class Log:
+class Log(object):
     def __init__(self):
-        global logPath, resultPath, proDir             #声明全局变量
-        proDir = readConfig.proDir                     #根目录地址相当于这里的接口测试文档框架路径
+        proDir = os.getcwd()     #os.getcwd()表示当前路径，"../.."表示上上级路径
+        # proDir = os.path.abspath(os.path.join(os.getcwd(), "..")) # 上级路径
         resultPath = os.path.join(proDir, "result")   #结果文件夹result路径
         if not os.path.exists(resultPath):            #判断文件夹是否存在，如果存在
             os.mkdir(resultPath)                       #如果没有就创建
         logPath = os.path.join(resultPath, str(datetime.now().strftime("%Y%m%d%H%M")))    #拼接log文档生成的文件夹名以%Y%m%d%H%M%S格式
         if not os.path.exists(logPath):
             os.mkdir(logPath)
-        self.logger = logging.getLogger()              #使用接口调试，信息，警告，错误，严重之前必须创建记录器实例
-        self.logger.setLevel(logging.INFO)             #设置日志级别
+        # 如果不想别人修改log，可以先变为私有变量
+        self._logger = logging.getLogger('gdzc')              #使用接口调试，信息，警告，错误，严重之前必须创建记录器实例,设置实例名gdzc
+        self._logger.setLevel(logging.INFO)             #设置日志级别
                                                         # CRITICAL: 'CRITICAL',
                                                         # ERROR: 'ERROR',
                                                         # WARNING: 'WARNING',
@@ -29,33 +27,35 @@ class Log:
                                                         # DEBUG: 'DEBUG',
                                                         # NOTSET: 'NOTSET',
 
-        # defined handler                       Handler处理器，将（记录器产生的）日志记录发送至合适的目的地
-        handler = logging.FileHandler(os.path.join(logPath, "output.log"))
+        # defined handler                       Handler处理器，将（记录器产生的）日志记录发送至合适的目的地，可以修改日志文件的编码格式
+        handler = logging.FileHandler(os.path.join(logPath, "result.log"),encoding='utf-8')
         # defined formatter                     格式化器，指明了最终输出中日志记录的布局   使用Formatter对象设置日志信息最后的规则，结构和内容，默认的时间格式为％Y-％m-％d％H：％M：％S
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)        #格式化
-        self.logger.addHandler(handler)        #句柄
+        handler.setFormatter(formatter)        #格式化，给handler选择一个Formatter
+        self._logger.addHandler(handler)        #为logger添加句柄
 
+    '''这里用到了property装饰器，可以把方法变成属性，原本方法调用需要get_logger(),现在只要get_logger就可以'''
+    @property
     def get_logger(self):
         """获取记录
         get logger
         :return:
         """
-        return self.logger
+        return self._logger
 
     def build_start_line(self, case_no):
         """写入起始行
         write start line
         :return:
         """
-        self.logger.info("--------" + case_no + " START--------")
+        self._logger.info("--------" + case_no + " START--------")
 
     def build_end_line(self, case_no):
         """写入结束行
         write end line
         :return:
         """
-        self.logger.info("--------" + case_no + " END--------")
+        self._logger.info("--------" + case_no + " END--------")
 
     def build_case_line(self, case_name):
         """编写测试用例行
@@ -64,35 +64,7 @@ class Log:
         :param code:
         :return:
         """
-        self.logger.info(case_name)
-
-    def get_report_path(self):
-        """获取报告路径
-        get report file path
-        :return:
-        """
-        report_path = os.path.join(logPath, "report.html")
-        return report_path
-
-    def get_result_path(self):
-        """获取测试结果路径
-        get test result path
-        :return:
-        """
-        return logPath
-
-    def write_result(self, result):
-        """写入报告结果
-
-        :param result:
-        :return:
-        """
-        result_path = os.path.join(logPath, "report.html")
-        fb = open(result_path, "wb")
-        try:
-            fb.write(result)               #结果
-        except FileNotFoundError as ex:
-            logger.error(str(ex))
+        self._logger.info(case_name)
 
 
 class MyLog:                    #放进线程组内
@@ -113,8 +85,7 @@ class MyLog:                    #放进线程组内
         return MyLog.log
 
 if __name__ == "__main__":
-    log = MyLog.get_log()         #启动MyLog的get_log方法开启锁，get_log中又启动Log进行初始化
-    logger = log.get_logger()    #获取记录
+    logger = Log().get_logger    #获取记录
     logger.debug("test debug")  #测试级别为bug
     logger.info("test info")    #测试级别为info
 
