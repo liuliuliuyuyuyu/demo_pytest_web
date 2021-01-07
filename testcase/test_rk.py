@@ -3,11 +3,15 @@ import time
 import pytest
 
 from driver.login import Login
+from driver.Log import Log
 from page.MainPage import MainPage
 from page.RkdshPage import RkdshPage
+from testcase.BaseTestCase import BaseTestCase
 
-class Testrk():
+
+class Testrk(BaseTestCase):
     def setup(self):
+        logger = Log().get_logger()
         self.driver = Login().login()
         self.main = MainPage(self.driver)
 
