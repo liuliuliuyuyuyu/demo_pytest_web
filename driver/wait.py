@@ -19,3 +19,5 @@ class Wait():
     def waitFind(self,type,route):
         if type == 'xpath':
             self.wa.until(EC.visibility_of_element_located((By.XPATH, route)))
+
+
