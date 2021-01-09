@@ -69,7 +69,7 @@ class Log(object):
 
 class MyLog:                    #放进线程组内
     log = None
-    mutex = threading.Lock()    #线程锁一次只能一个锁定
+    mutex = threading.Lock()    #线程锁一次只能一个锁定，这样就能使所有测试log都在一个文件中
 
     def __init__(self):
         pass

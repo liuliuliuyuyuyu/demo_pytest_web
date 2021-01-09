@@ -2,6 +2,7 @@
 
 import logging
 
+#这个也已经废弃了使用Log了
 class BaseTestCase(object):
     logging.basicConfig()  # 先初始化
     # 设置一个独立的log，在为它设置级别

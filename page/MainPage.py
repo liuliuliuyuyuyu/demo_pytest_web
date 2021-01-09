@@ -1,21 +1,18 @@
 # coding=UTF-8
-import time
 
-from selenium.webdriver import ActionChains
+from page.BasePage import BasePage,BaseHandler
 
-from driver.wait import Wait
-from page.BasePage import BasePage
-
-
+#通过主页的搜索菜单打开各页面，现在也展示启用，直接在测试用例中使用self.driver.get(url)进入
 class MainPage(BasePage):
     def search(self,keyword):
-        wait = Wait(self.driver)
-        wait.waitSend('xpath', '//*[@id="dept_id_2"]', keyword)
-        wait.waitFind('xpath', '//*[@id="ext-gen123"]/div')
+        # baseHandler = BaseHandler(self.driver)
+        baseHandler = BaseHandler()
+        baseHandler.input_text(self.Find(('xpath', '//*[@id="dept_id_2"]')), keyword)
+        MainPage.Find(('xpath', '//*[@id="ext-gen123"]/div'))
 
-        # self.driver.find_element_by_xpath('//*[@id="dept_id_2"]').send_keys(keyword)
-        ac = ActionChains(self.driver)
-        ac.double_click(self.driver.find_element_by_xpath('//*[@id="ext-gen123"]/div')).perform()
+        BaseHandler.double_click(('xpath','//*[@id="ext-gen123"]/div'))
+        # ac = ActionChains(self.driver)
+        # ac.double_click(self.driver.find_element_by_xpath('//*[@id="ext-gen123"]/div')).perform()
         return self
 
 

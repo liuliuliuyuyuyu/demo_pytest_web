@@ -1,6 +1,10 @@
+# coding=UTF-8
+
 from selenium import webdriver
 
 
+#和longin一样，只是多了参数控制开关浏览器，在run启动函数中多了控制
+#longin是直接登录，这个driver只是打开浏览器
 class Driver:
     __driver=None
     __options=None
