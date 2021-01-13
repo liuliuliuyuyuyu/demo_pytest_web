@@ -1,0 +1,187 @@
+{
+  "uid" : "b1356c7f1f0c0e63",
+  "name" : "test_demo1[test_info0]",
+  "fullName" : "testcase.test_rkdsh.Test_rkdsh#test_demo1",
+  "historyId" : "2ef6ff90f729141051c5e4d78eeed30c",
+  "time" : {
+    "start" : 1610508354376,
+    "stop" : 1610508355532,
+    "duration" : 1156
+  },
+  "description" : "\n        根据单据查询      这个信息会出现在测试报告的Description中，相当于@allure.description\n        ",
+  "descriptionHtml" : "<pre><code>    根据单据查询      这个信息会出现在测试报告的Description中，相当于@allure.description\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Class__pytest_setup_class",
+    "time" : {
+      "start" : 1610508334420,
+      "stop" : 1610508345360,
+      "duration" : 10940
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_Class__pytest_setup_method",
+    "time" : {
+      "start" : 1610508345361,
+      "stop" : 1610508354372,
+      "duration" : 9011
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n        根据单据查询      这个信息会出现在测试报告的Description中，相当于@allure.description\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "测试步骤 输入两个单号后点击查询",
+      "time" : {
+        "start" : 1610508354564,
+        "stop" : 1610508354569,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "d2dfb85d689c1c9e",
+        "name" : "8cff9761-b8f8-465b-91d5-b978c733e00d-attachment.attach",
+        "source" : "d2dfb85d689c1c9e.attach",
+        "type" : "text/plain",
+        "size" : 21
+      }, {
+        "uid" : "496def7c256fbbb9",
+        "name" : "525e46da-ae72-45c9-96cc-8606e6a5013e-attachment.attach",
+        "source" : "496def7c256fbbb9.attach",
+        "type" : "text/plain",
+        "size" : 21
+      }, {
+        "uid" : "e268b218f13835fd",
+        "name" : "2439c6f3-e0b6-4fd6-9669-93cce9f12d79-attachment.attach",
+        "source" : "e268b218f13835fd.attach",
+        "type" : "text/plain",
+        "size" : 18
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "abd193d956213ec4",
+      "name" : "log",
+      "source" : "abd193d956213ec4.txt",
+      "type" : "text/plain",
+      "size" : 111
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_Class__pytest_setup_class::0",
+    "time" : {
+      "start" : 1610508377297,
+      "stop" : 1610508379540,
+      "duration" : 2243
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_Class__pytest_setup_method::0",
+    "time" : {
+      "start" : 1610508355534,
+      "stop" : 1610508355534,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "入库单审核查询功能测试feature"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "story",
+    "value" : "根据存在单据号查询入库单"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_rkdsh"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_rkdsh"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-IP5FKFER"
+  }, {
+    "name" : "thread",
+    "value" : "11784-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_rkdsh"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "test_info",
+    "value" : "['RK202012001', 'RK202012001']"
+  } ],
+  "links" : [ {
+    "name" : "testcase_link",
+    "url" : "入库单审核查询功能的testcase",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "run(order=1)" ]
+  },
+  "source" : "b1356c7f1f0c0e63.json",
+  "parameterValues" : [ "['RK202012001', 'RK202012001']" ]
+}

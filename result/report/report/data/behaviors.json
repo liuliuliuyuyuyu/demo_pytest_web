@@ -1,0 +1,103 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "入库单审核查询功能测试feature",
+    "children" : [ {
+      "name" : "根据存在单据号查询入库单",
+      "children" : [ {
+        "name" : "test_demo1[test_info0]",
+        "uid" : "b1356c7f1f0c0e63",
+        "parentUid" : "515b4c55d7bf96b2740ad752786655ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1610508354376,
+          "stop" : 1610508355532,
+          "duration" : 1156
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "['RK202012001', 'RK202012001']" ]
+      }, {
+        "name" : "test_demo1[test_info1]",
+        "uid" : "ffc89e7028aa2898",
+        "parentUid" : "515b4c55d7bf96b2740ad752786655ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1610508359516,
+          "stop" : 1610508360671,
+          "duration" : 1155
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "['RK202012002', 'RK202012002']" ]
+      }, {
+        "name" : "test_demo1[test_info2]",
+        "uid" : "26e1596e862cccce",
+        "parentUid" : "515b4c55d7bf96b2740ad752786655ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1610508364506,
+          "stop" : 1610508365639,
+          "duration" : 1133
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "['RK202012003', 'RK202012003']" ]
+      } ],
+      "uid" : "515b4c55d7bf96b2740ad752786655ff"
+    }, {
+      "name" : "根据不存在单据号查询入库单",
+      "children" : [ {
+        "name" : "test_demo2[test_info0]",
+        "uid" : "96ed633542387d08",
+        "parentUid" : "4057bbdd2e34a40e3e512ad9f2c54d9b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1610508369492,
+          "stop" : 1610508371108,
+          "duration" : 1616
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "['RK202012002', 'RK202012002']" ]
+      } ],
+      "uid" : "4057bbdd2e34a40e3e512ad9f2c54d9b"
+    }, {
+      "name" : "allure.story 第三个子功能",
+      "children" : [ {
+        "name" : "test_demo3",
+        "uid" : "e8b9fbdf9a14ca3b",
+        "parentUid" : "49cd82a7fa1aacb48b5dea7a1da6caa9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1610508377284,
+          "stop" : 1610508377284,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "49cd82a7fa1aacb48b5dea7a1da6caa9"
+    }, {
+      "name" : "allure.story 第四个子功能",
+      "children" : [ {
+        "name" : "test_demo4",
+        "uid" : "4a7184618b993ff9",
+        "parentUid" : "30b3a0b94410f6895bf5c609a10313ae",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1610508377291,
+          "stop" : 1610508377291,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "30b3a0b94410f6895bf5c609a10313ae"
+    } ],
+    "uid" : "5cdff4df71c1ad5917c83aa9d6a6f75d"
+  } ]
+}

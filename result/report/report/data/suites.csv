@@ -1,0 +1,15 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jan 13 11:26:17 CST 2021","Wed Jan 13 11:26:17 CST 2021","0","testcase","test_rkdsh","Test_rkdsh","","","test_demo3",""
+"passed","Wed Jan 13 11:25:54 CST 2021","Wed Jan 13 11:25:55 CST 2021","1156","testcase","test_rkdsh","Test_rkdsh","","","test_demo1[test_info0]","
+        根据单据查询      这个信息会出现在测试报告的Description中，相当于@allure.description
+        "
+"passed","Wed Jan 13 11:26:09 CST 2021","Wed Jan 13 11:26:11 CST 2021","1616","testcase","test_rkdsh","Test_rkdsh","","","test_demo2[test_info0]","
+        根据单据查询
+        "
+"passed","Wed Jan 13 11:25:59 CST 2021","Wed Jan 13 11:26:00 CST 2021","1155","testcase","test_rkdsh","Test_rkdsh","","","test_demo1[test_info1]","
+        根据单据查询      这个信息会出现在测试报告的Description中，相当于@allure.description
+        "
+"skipped","Wed Jan 13 11:26:17 CST 2021","Wed Jan 13 11:26:17 CST 2021","0","testcase","test_rkdsh","Test_rkdsh","","","test_demo4",""
+"passed","Wed Jan 13 11:26:04 CST 2021","Wed Jan 13 11:26:05 CST 2021","1133","testcase","test_rkdsh","Test_rkdsh","","","test_demo1[test_info2]","
+        根据单据查询      这个信息会出现在测试报告的Description中，相当于@allure.description
+        "
